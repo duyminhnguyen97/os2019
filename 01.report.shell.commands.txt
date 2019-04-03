@@ -1,0 +1,60 @@
+echo hello world
+hello world
+
+passwd
+Changing password for foxybunny.
+(current) UNIX password: 
+
+date
+Thứ tư, 03 Tháng 4 năm 2019 10:14:32 +07
+
+hostname
+MinhPC
+
+arch
+x86_64
+
+uname -a
+Linux MinhPC 4.18.0-17-generic #18~18.04.1-Ubuntu SMP Fri Mar 15 15:27:12 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+dmesg
+[ 2026.394101] audit: type=1107 audit(1554258707.677:46): pid=962 uid=103 auid=4294967295 ses=4294967295 subj==unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/hostname1" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.121" pid=2814 label="snap.opera.opera" peer_pid=5891 peer_label="unconfined"
+                exe="/usr/bin/dbus-daemon" sauid=103 hostname=? addr=? terminal=?'
+[ 2026.394357] audit: type=1107 audit(1554258707.677:47): pid=962 uid=103 auid=4294967295 ses=4294967295 subj==unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/hostname1" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.121" pid=2814 label="snap.opera.opera" peer_pid=5891 peer_label="unconfined"
+                exe="/usr/bin/dbus-daemon" sauid=103 hostname=? addr=? terminal=?'
+
+uptime
+10:16:40 up  1:18,  1 user,  load average: 0,25, 0,35, 0,29
+
+who am i
+
+whoami
+foxybunny
+
+who
+foxybunny :0           2019-04-03 08:58 (:0)
+
+id
+uid=1000(foxybunny) gid=1000(foxybunny) groups=1000(foxybunny),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),116(lpadmin),126(sambashare)
+
+last
+reboot   system boot  4.18.0-17-generi Wed Apr  3 01:16 - 02:10  (00:53)
+foxybunn tty2                          Wed Apr  3 01:14 - down   (00:01)
+reboot   system boot  4.18.0-17-generi Wed Apr  3 01:13 - 01:15  (00:01)
+reboot   system boot  4.18.0-17-generi Wed Apr  3 01:12 - 01:15  (00:03)
+foxybunn tty2                          Tue Apr  2 22:51 - down   (02:18)
+reboot   system boot  4.18.0-17-generi Tue Apr  2 22:51 - 01:10  (02:19)
+reboot   system boot  4.18.0-17-generi Tue Apr  2 22:48 - 01:10  (02:21)
+foxybunn :0           :0               Tue Apr  2 22:36 - crash  (00:12)
+reboot   system boot  4.18.0-17-generi Tue Apr  2 22:36 - 01:10  (02:34)
+
+wtmp begins Tue Apr  2 22:36:02 2019
+
+finger
+Login      Name              Tty      Idle  Login Time   Office     Office Phone
+foxybunny  Duy Minh Nguyen  *:0             Apr  3 08:58 (:0)
+
+w
+ 10:19:14 up  1:21,  1 user,  load average: 0,28, 0,33, 0,28
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+foxybunn :0       :0               08:58   ?xdm?   2:18   0.01s /usr/lib/gdm3/g
