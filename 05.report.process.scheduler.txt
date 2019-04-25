@@ -1,0 +1,40 @@
+$ cat /proc/sched_debug | grep 'systemd'
+ Ssystemd-resolve   871        72.077127      2028   120         0.000000       482.370700         0.000000 0 0 /autogroup-29
+ S        systemd  1305        23.269311        95   120         0.000000        76.852639         0.000000 0 0 /autogroup-73
+ Ssystemd-journal   337       160.429231      4032   119         0.000000      1828.912234         0.000000 0 0 /autogroup-4
+ S        systemd  1829         7.800848       247   120         0.000000       201.325583         0.000000 0 0 /autogroup-99
+ S        systemd     1      6411.490203    822472   120         0.000000     34532.817762         0.000000 0 0 /autogroup-2
+ Ssystemd-timesyn   873         0.436553       131   120         0.000000        42.151283         0.000000 0 0 /autogroup-31
+ S  systemd-udevd   367      1106.482736       735   120         0.000000       256.244173         0.000000 0 0 /autogroup-14
+ S systemd-logind  1085        61.744531     10380   120         0.000000       385.904045         0.000000 0 0 /autogroup-43
+
+$ cat /proc/1/sched
+systemd (1, #threads: 1)
+-------------------------------------------------------------------
+se.exec_start                                :       9617317.259035
+se.vruntime                                  :          5572.649807
+se.sum_exec_runtime                          :         34711.795665
+se.nr_migrations                             :                13915
+nr_switches                                  :               827395
+nr_voluntary_switches                        :               827008
+nr_involuntary_switches                      :                  387
+se.load.weight                               :              1048576
+se.runnable_weight                           :              1048576
+se.avg.load_sum                              :                   77
+se.avg.runnable_load_sum                     :                   77
+se.avg.util_sum                              :                12288
+se.avg.load_avg                              :                    0
+se.avg.runnable_load_avg                     :                    0
+se.avg.util_avg                              :                    0
+se.avg.last_update_time                      :        9617317258240
+se.avg.util_est.ewma                         :                   10
+se.avg.util_est.enqueued                     :                    0
+policy                                       :                    0
+prio                                         :                  120
+clock-delta                                  :                   62
+mm->numa_scan_seq                            :                    0
+numa_pages_migrated                          :                    0
+numa_preferred_nid                           :                   -1
+total_numa_faults                            :                    0
+current_node=0, numa_group_id=0
+numa_faults node=0 task_private=0 task_shared=0 group_private=0 group_shared=0
