@@ -1,0 +1,20 @@
+ls | grep 'list'
+//no output bc no file match
+
+wc /etc/passwd
+  42   74 2508 /etc/passwd
+
+free -t
+              total        used        free      shared  buff/cache   available
+Mem:        8018176     2205444     3854268      143144     1958464     5396512
+Swap:       7812092           0     7812092
+Total:     15830268     2205444    11666360
+
+cat /proc/cpuinfo
+cpu cores	: 6
+
+find /home/foxybunny/Pictures -name *.jpg | wc -l
+1
+
+
+
