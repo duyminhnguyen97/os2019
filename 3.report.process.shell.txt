@@ -1,0 +1,54 @@
+$ ps -e
+  PID TTY          TIME CMD
+    1 ?        00:00:16 systemd
+    2 ?        00:00:00 kthreadd
+    3 ?        00:00:00 rcu_gp
+    4 ?        00:00:00 rcu_par_gp
+    6 ?        00:00:00 kworker/0:0H-kb
+    8 ?        00:00:00 mm_percpu_wq
+    9 ?        00:00:00 ksoftirqd/0
+   10 ?        00:00:01 rcu_sched
+
+$ discord
+Discord 0.0.9
+Starting app.
+Starting updater.
+[Modules] Modules initializing
+[Modules] Distribution: remote
+[Modules] Host updates: enabled
+[Modules] Module updates: enabled
+[Modules] Module install path: /home/foxybunny/snap/discord/93/.config/discord/0.0.9/modules
+[Modules] Module installed file path: /home/foxybunny/snap/discord/93/.config/discord/0.0.9/modules/installed.json
+[Modules] Module download path: /home/foxybunny/snap/discord/93/.config/discord/0.0.9/modules/pending
+[Modules] No updates to install
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discordapp.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+Fontconfig warning: "/etc/fonts/conf.avail/53-monospace-lcd-filter.conf", line 10: Having multiple values in <test> isn't supported and may not work as expected
+
+$ ps -e | grep 'Discord'
+13327 pts/0    00:00:02 Discord
+13434 pts/0    00:00:00 Discord
+13456 pts/0    00:00:02 Discord
+13497 pts/0    00:00:09 Discord
+
+$ cat /proc/13327/status
+Name:	Discord
+Umask:	0022
+State:	S (sleeping)
+Tgid:	13327
+Ngid:	0
+Pid:	13327
+PPid:	13075
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	256
+Groups:	4 24 27 30 46 116 126 1000 
+
+$ kill -STOP 13327
+
+$ kill -CONT 13327
+
+$ kill -KILL 13327
