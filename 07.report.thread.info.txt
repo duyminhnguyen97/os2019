@@ -1,0 +1,7 @@
+$ ps -e
+$ ps -o nlwp 9073
+NLWP
+  42
+
+$ find /proc/9073/task/ | wc -l
+18663
